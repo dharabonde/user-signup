@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form action="/" method="Post">
+    <table>
+        <tr>
+            <td><label for="username">Username</label></td>
+            <td><input id="username" type="text" size="25" name="username" value='{{username}}'/></td>
+            <td><label class="error">{{name_error}}</label></td>
+        </tr>
+        <tr>
+            <td><label for="pwd">Password</label></td>
+            <td><input id="pwd" type="password" size="25" name="pwd" value='{{pwd}}'/></td>
+            <td><label class="error">{{pwd_error}}</label></td>
+        </tr>
+        <tr>
+            <td><label for="repwd">Verify Password</label></td>
+            <td><input id="repwd" type="password" size="25" name="repwd" value='{{repwd}}'/></td>
+            <td><label class="error">{{repwd_error}}</label></td>
+        </tr>
+        <tr>
+            <td><label for="email">Email (optional)</label></td>
+            <td><input id="email" type="text" size="25" name="email" value='{{email}}'/></td>
+            <td><label class="error">{{email_error}}</label></td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Submit"/>
+            </td>
+        </tr>
+    </table> 
+</form>
+
+{% endblock %}
