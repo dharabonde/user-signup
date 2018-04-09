@@ -48,7 +48,7 @@ def signup_validate():
             email_error = 'Not a valid email: it must contain single @, single ., and is between 3 and 20 characters long'
         else:            
             if (email.count('@') == 1 and email.count('.') == 1):      
-                if ('' in email):
+                if (' ' in email):
                     email = ''  
                     email_error='Spaces are not allowed.'    
                 else:     
