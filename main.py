@@ -20,26 +20,28 @@ def signup_validate():
     repwd_error = ''    
     email_error = ''
 
-    if len(username) < 3 or len(username) > 20:    
-        username = ''
-        name_error = 'Username must be between 3 and 20 characters'    
+    if (' ' in username):        
+        name_error='No spaces please!!'
+               
+    if len(username) < 3 or len(username) > 20:            
+        name_error = 'Username must be between 3 and 20 characters'          
     else:
         username = username
 
+    if (' ' in pwd):        
+        pwd_error='No spaces please!!'
+                
     if len(pwd) < 3 or len(pwd) > 20:
-        #pwd=pwd
-        pwd = ''
+        pwd=pwd        
         pwd_error = 'Password must contain more than 3 characters, max 20'
 
     if len(repwd) < 3 or len(repwd) > 20:
-        #repwd = repwd
-        repwd=''
+        repwd = repwd       
         repwd_error = 'Verification password must contain more than 3 characters, max 20' 
     
     if pwd != repwd:
-        pwd = pwd
-        repwd=''
-        #repwd = repwd
+        pwd = pwd        
+        repwd = repwd
         repwd_error = 'Passwords do not match'
 
     if len(email) > 0: 
